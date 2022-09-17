@@ -12,6 +12,7 @@
     public void OnEnter()
     {
         this.mapStateComponent.Init(() => this.stateMachine.ChangeState(StateName.MODAL));
+        this.mapStateComponent.OnEnter();
     }
 
     public void OnUpdate()
