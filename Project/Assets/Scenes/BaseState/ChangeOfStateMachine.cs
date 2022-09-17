@@ -44,7 +44,7 @@ public class ChangeOfStateMachine : MonoBehaviour
             };
 
         // TODO:MapStateを見るために
-        this.current = this.stateNode.Values.ToList()[0];
+        this.current = this.stateNode.Values.ToList()[1];
         this.current.OnEnter();
         Debug.Log(this.current);
     }

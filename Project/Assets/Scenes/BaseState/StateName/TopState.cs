@@ -12,8 +12,6 @@
     public void OnEnter()
     {
         this.topStateComponent.Init(() => this.stateMachine.ChangeState(StateName.MAP));
-        this.topStateComponent.OnEnter();
-
     }
 
     public void OnUpdate()

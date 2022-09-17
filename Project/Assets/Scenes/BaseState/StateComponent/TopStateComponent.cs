@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 
 public class TopStateComponent : StateComponentBase
 {
@@ -13,22 +12,9 @@ public class TopStateComponent : StateComponentBase
         this.onUpdateState = onUpdateState;
     }
 
-    public void OnEnter()
-    {
-        ChangeInGameState();
-        Debug.Log("OnEnter");
-    }
-
     public void OnUpdate()
     {
-
     }
-
-    private void ChangeInGameState()
-    {
-        this.onUpdateState?.Invoke();
-    }
-
 
     public void OnExit()
     {
