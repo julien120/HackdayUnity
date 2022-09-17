@@ -11,7 +11,11 @@
 
     public void OnEnter()
     {
-        this.modalStateComponent.Init(() => this.stateMachine.ChangeState(StateName.MODAL));
+        this.modalStateComponent.Init(() => this.stateMachine.ChangeState(StateName.ARCAMERA));
+        this.modalStateComponent.ChangeMapState(() => this.stateMachine.ChangeState(StateName.MAP));
+        this.modalStateComponent.OnEnter();
+        
+        
     }
 
     public void OnUpdate()

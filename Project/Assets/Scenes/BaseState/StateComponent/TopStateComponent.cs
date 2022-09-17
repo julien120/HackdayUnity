@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class TopStateComponent : StateComponentBase
 {
+    [SerializeField] private GameObject topCanvasGrop;
     public override void Init(Action onUpdateState)
     {
         this.onUpdateState = onUpdateState;
@@ -15,8 +16,7 @@ public class TopStateComponent : StateComponentBase
 
     public void OnEnter()
     {
-        ChangeInGameState();
-        Debug.Log("OnEnter");
+        topCanvasGrop.SetActive(true);
     }
 
     public void OnUpdate()
@@ -24,7 +24,7 @@ public class TopStateComponent : StateComponentBase
 
     }
 
-    private void ChangeInGameState()
+    private void ChangeMapState()
     {
         this.onUpdateState?.Invoke();
     }
